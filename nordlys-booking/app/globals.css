@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root{
+  --paper:#F3F4F0;
+  --paper-dim:#EAEBE6;
+  --ink:#1B2733;
+  --ink-soft:#3D4B58;
+  --grey:#6B7686;
+  --line:#D8DCD9;
+  --teal:#2F6F62;
+  --teal-dim:#E4EEEC;
+  --amber:#C1652B;
+  --amber-dim:#F3E4D8;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:'IBM Plex Sans', sans-serif;font-size:16px;line-height:1.6;
+}
+h1,h2,h3{font-family:'Fraunces', serif;font-weight:500;margin:0 0 0.4em;color:var(--ink);}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+@media (max-width:640px){.wrap{padding:0 20px;}}
+.site-header{border-bottom:1px solid var(--line);padding:18px 0;}
+.brand{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;}
+.hero{padding:56px 0 24px;}
+.lede{color:var(--ink-soft);font-size:1.05rem;max-width:52ch;}
+.section{padding:40px 0 80px;}
+.btn-primary{
+  background:var(--amber);color:#fff;padding:13px 24px;border:none;border-radius:3px;
+  font-weight:600;font-size:0.98rem;cursor:pointer;display:inline-block;
+}
+.btn-primary:hover{background:#a8541f;}
+.btn-primary:disabled{opacity:0.6;cursor:default;}
+.btn-ghost{
+  color:var(--ink);font-weight:500;border-bottom:1px solid var(--ink);
+  padding-bottom:2px;display:inline-block;
+}
+
+.course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);}
+.course-card{background:var(--paper);padding:26px;display:block;}
+.course-card:hover{background:var(--teal-dim);}
+.course-level{color:var(--teal);font-weight:600;font-size:0.85rem;margin-bottom:8px;}
+.course-format{color:var(--ink-soft);font-size:0.92rem;}
+.course-price{font-family:'Fraunces',serif;font-size:1.3rem;margin-top:10px;}
+.course-seats{font-size:0.88rem;color:var(--grey);margin-top:4px;}
+
+.booking-form{max-width:420px;margin-top:32px;display:flex;flex-direction:column;gap:16px;}
+.booking-form label{display:flex;flex-direction:column;gap:6px;font-size:0.92rem;color:var(--ink-soft);}
+.booking-form input{padding:11px 12px;border:1px solid var(--line);border-radius:3px;font-size:1rem;font-family:inherit;}
+.form-error{color:#B3261E;font-size:0.9rem;}
+
+.admin-form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:640px;margin-bottom:40px;}
+.admin-form input,.admin-form select,.admin-form textarea{
+  padding:10px;border:1px solid var(--line);border-radius:3px;font-family:inherit;font-size:0.95rem;
+}
+.admin-form textarea{grid-column:span 2;min-height:70px;}
+.admin-table{width:100%;border-collapse:collapse;margin-bottom:48px;font-size:0.92rem;}
+.admin-table th,.admin-table td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);}
+.admin-table th{color:var(--grey);font-weight:500;}
